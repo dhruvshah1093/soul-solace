@@ -13,7 +13,7 @@ defineProps(['title', 'message'])
 <style scoped>
 .hero {
   position: relative;
-  min-height: 60vh;
+  min-height: 90vh;
   background-image: url('/uploads/Introduction.jpg');
   background-size: cover;
   background-position: center;
@@ -26,7 +26,7 @@ defineProps(['title', 'message'])
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.734);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +35,13 @@ defineProps(['title', 'message'])
 }
 
 .overlay-message {
-  font-size: 3rem;
-  color: #555;
+  font-size:xx-large;
+  color: #a69c98;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
+  width: 80%;
+  height: 80%;
 }
 </style>
