@@ -15,20 +15,22 @@ defineProps(['photo', 'name', 'bio'])
 <style scoped>
 .profile {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
+  min-height: 90vh;
+  justify-content: center;
+  text-align: center;
 }
 
 .profile-photo {
   border-radius: 100px;
   width: 200px;
-  margin-right: 2rem;
   margin-bottom: 1rem;
 }
 
 .profile-text {
-  flex: 1 1 300px;
+  max-width: 600px;
 }
 
 .name {
@@ -38,5 +40,7 @@ defineProps(['photo', 'name', 'bio'])
 .bio-text {
   font-weight: 300;
   color: #555;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 </style>

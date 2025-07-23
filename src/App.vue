@@ -137,4 +137,8 @@ nav a.active {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
+#about {
+  min-height: 90vh;
+  width: 100%;
+}
 </style>
