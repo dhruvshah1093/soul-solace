@@ -95,7 +95,7 @@ nav {
   gap: 0.5rem;
 }
 .logo {
-  height: 40px;
+  height:40px;
 }
 .title {
   font-weight: bold;
