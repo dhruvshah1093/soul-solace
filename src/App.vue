@@ -132,10 +132,14 @@ nav a.active {
   font-weight: bold;
   font-size: 1.2rem;
 }
-.service-grid {
-  display: flex;
-  flex-wrap: wrap;
+#services.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+  min-height: 90vh;
+  width: 100%;
 }
 #about {
   min-height: 90vh;
