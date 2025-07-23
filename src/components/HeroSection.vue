@@ -13,6 +13,16 @@ defineProps(['title', 'message'])
 .hero {
   text-align: center;
   padding: 3rem 2rem;
-  background-color: #f5f7fa;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/uploads/Introduction.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
 }
 </style>
