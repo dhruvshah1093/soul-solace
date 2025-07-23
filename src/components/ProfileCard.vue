@@ -1,8 +1,10 @@
 <template>
   <div class="profile">
-    <img :src="photo" alt="Profile" />
-    <h2>{{ name }}</h2>
-    <p>{{ bio }}</p>
+    <img :src="photo" alt="Profile" class="profile-photo" />
+    <div class="profile-bio">
+      <h2>{{ name }}</h2>
+      <p>{{ bio }}</p>
+    </div>
   </div>
 </template>
 
@@ -12,12 +14,18 @@ defineProps(['photo', 'name', 'bio'])
 
 <style scoped>
 .profile {
-  text-align: center;
+  display: flex;
+  align-items: center;
   padding: 2rem;
 }
-img {
+
+.profile-photo {
   border-radius: 100px;
   width: 150px;
-  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+
+.profile-bio {
+  flex: 1;
 }
 </style>
