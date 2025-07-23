@@ -1,6 +1,10 @@
 <template>
   <div>
     <header class="navbar">
+      <div class="brand">
+        <img src="/logo.png" alt="Soul Solace Therapy logo" class="logo" />
+        <span class="title">Soul Solace Therapy</span>
+      </div>
       <nav>
         <a href="#hero">Home</a>
         <a href="#about">About</a>
@@ -77,10 +81,25 @@ onMounted(async () => {
   background: #fff;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 nav {
   display: flex;
   gap: 1.5rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo {
+  height: 40px;
+}
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 .service-grid {
   display: flex;
