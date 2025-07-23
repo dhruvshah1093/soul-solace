@@ -6,10 +6,30 @@
         <span class="title">Soul Solace Therapy</span>
       </div>
       <nav>
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a
+          href="#hero"
+          :class="{ active: activeTab === 'hero' }"
+          @click="activeTab = 'hero'"
+          >Home</a
+        >
+        <a
+          href="#about"
+          :class="{ active: activeTab === 'about' }"
+          @click="activeTab = 'about'"
+          >About</a
+        >
+        <a
+          href="#services"
+          :class="{ active: activeTab === 'services' }"
+          @click="activeTab = 'services'"
+          >Services</a
+        >
+        <a
+          href="#contact"
+          :class="{ active: activeTab === 'contact' }"
+          @click="activeTab = 'contact'"
+          >Contact</a
+        >
       </nav>
     </header>
     <main>
@@ -43,6 +63,7 @@ import ServiceCard from '@/components/ServiceCard.vue'
 import ContactInfo from '@/components/ContactInfo.vue'
 import ContactForm from '@/components/ContactForm.vue'
 
+const activeTab = ref('hero')
 const homeContent = ref({ title: '', message: '' })
 const aboutContent = ref({ photo: '', name: '', bio: '' })
 const services = ref([])
@@ -88,6 +109,16 @@ onMounted(async () => {
 nav {
   display: flex;
   gap: 1.5rem;
+}
+nav a {
+  color: #000;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+nav a.active {
+  border-bottom-color: #000;
+  font-weight: bold;
 }
 .brand {
   display: flex;
