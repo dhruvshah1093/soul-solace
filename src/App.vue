@@ -105,6 +105,11 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 nav {
   display: flex;
@@ -144,5 +149,13 @@ nav a.active {
 #about {
   min-height: 90vh;
   width: 100%;
+}
+
+main {
+  padding-top: 80px;
+}
+
+section {
+  scroll-margin-top: 80px;
 }
 </style>
