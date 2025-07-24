@@ -34,6 +34,7 @@ defineProps(['title', 'message'])
   text-align: center;
   padding: 0 1rem;
   overflow: hidden;
+  perspective: 800px;
 }
 
 .overlay-message {
@@ -42,8 +43,25 @@ defineProps(['title', 'message'])
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 1rem;
-  animation: slide-up 10s ease forwards;
+  padding: 0.6em 1.2em;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 4px rgba(255, 215, 0, 0.8);
+  animation: slide-up 10s ease forwards, emerge 1s ease-out forwards;
+  transform: translateZ(-50px);
+}
+
+@keyframes emerge {
+  from {
+    transform: translateZ(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(0);
+    opacity: 1;
+  }
 }
 .guiding-light {
   position: absolute;
