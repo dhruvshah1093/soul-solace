@@ -117,6 +117,7 @@ nav {
   gap: 1.5rem;
 }
 nav a {
+  font-size: large;
   color: #000;
   padding: 0.5rem 1rem;
   text-decoration: none;
