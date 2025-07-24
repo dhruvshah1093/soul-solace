@@ -29,19 +29,33 @@ defineProps(['title', 'message'])
   background-color: rgba(0, 0, 0, 0.734);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
   padding: 0 1rem;
+  overflow: hidden;
 }
 
 .overlay-message {
-  font-size:xx-large;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  font-size: xx-large;
   color: #a69c98;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   text-align: center;
-  width: 80%;
-  height: 80%;
+  padding-top: 1rem;
+  animation: slide-up 2s ease forwards;
+}
+
+@keyframes slide-up {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0;
+  }
 }
 </style>
