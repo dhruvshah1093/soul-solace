@@ -2,7 +2,7 @@
   <section class="hero">
     <div class="overlay">
       <p class="guiding-light">{{ message }}</p>
-      <button class="overlay-message">Book an Appointment</button>
+      <button class="overlay-message">Get Started</button>
     </div>
   </section>
 </template>
@@ -44,22 +44,22 @@ defineProps(['title', 'message'])
   align-items: center;
   text-align: center;
   padding: 0.6em 1.2em;
-  font-weight: bold;
-  color: #000;
-  background-color: #fff;
+  color: #e3bfbf;
+  background: transparent;
   border-radius: 8px;
-  box-shadow: 0 0 20px 4px rgba(255, 215, 0, 0.8);
-  animation: slide-up 10s ease forwards, emerge 1s ease-out forwards;
+  box-shadow: 0 0 20px 4px rgba(255, 186, 186, 0.844);
+  animation: emerge 10s ease-out forwards;
   transform: translateZ(-50px);
+  font-size: large;
 }
 
 @keyframes emerge {
   from {
-    transform: translateZ(-50px);
+    top:90%;
     opacity: 0;
   }
   to {
-    transform: translateZ(0);
+    top:53%;
     opacity: 1;
   }
 }
@@ -74,16 +74,7 @@ defineProps(['title', 'message'])
   align-items: center;
   text-align: center;
   padding-top: 1rem;
-  animation: slide-up-2 10s ease forwards;
-}
-
-@keyframes slide-up {
-  from {
-    top: 90%;
-  }
-  to {
-    top: 50%;
-  }
+  animation: slide-up-2 12s ease forwards;
 }
 
 @keyframes slide-up-2 {
@@ -91,7 +82,7 @@ defineProps(['title', 'message'])
     top: 70%;
   }
   to {
-    top: 20%;
+    top: 30%;
   }
 }
 </style>

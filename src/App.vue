@@ -100,7 +100,7 @@ onMounted(async () => {
 <style scoped>
 .navbar {
   background: #e3bfbf;
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -132,9 +132,8 @@ nav a.active {
   align-items: center;
 }
 .logo {
-  padding-top: 1rem;
-  height:40px;
-  margin:none;
+  height:50px;
+  margin-right: 1rem;
 }
 .title {
   font-weight: bold;
