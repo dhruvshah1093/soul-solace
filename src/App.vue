@@ -99,8 +99,9 @@ onMounted(async () => {
 
 <style scoped>
 .navbar {
-  background: #fff;
-  padding: 1rem 2rem;
+  background: #e3bfbf;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
@@ -128,14 +129,15 @@ nav a.active {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 .logo {
+  padding-top: 1rem;
   height:40px;
+  margin:none;
 }
 .title {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #services.service-grid {
   display: grid;
