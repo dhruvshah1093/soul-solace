@@ -1,7 +1,8 @@
 <template>
   <section class="hero">
     <div class="overlay">
-      <p class="overlay-message">{{ message }}</p>
+      <p class="guiding-light">{{ message }}</p>
+      <button class="overlay-message">Book an Appointment</button>
     </div>
   </section>
 </template>
@@ -37,9 +38,17 @@ defineProps(['title', 'message'])
 
 .overlay-message {
   position: absolute;
-  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
+  animation: slide-up 10s ease forwards;
+}
+.guiding-light {
+  position: absolute;
   top: 100%;
-  width: 100%;
+  width: 75%;
   font-size: xx-large;
   color: #a69c98;
   display: flex;
@@ -47,15 +56,24 @@ defineProps(['title', 'message'])
   align-items: center;
   text-align: center;
   padding-top: 1rem;
-  animation: slide-up 2s ease forwards;
+  animation: slide-up-2 10s ease forwards;
 }
 
 @keyframes slide-up {
   from {
-    top: 100%;
+    top: 90%;
   }
   to {
-    top: 0;
+    top: 50%;
+  }
+}
+
+@keyframes slide-up-2 {
+  from {
+    top: 70%;
+  }
+  to {
+    top: 20%;
   }
 }
 </style>
