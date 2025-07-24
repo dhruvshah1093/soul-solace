@@ -142,10 +142,12 @@ nav a.active {
 #services.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   justify-items: center;
   align-items: center;
-  min-height: 90vh;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  min-height: 80vh;
   width: 100%;
 }
 #about {

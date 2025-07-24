@@ -11,7 +11,7 @@ defineProps(['title', 'description'])
 
 <style scoped>
 .card {
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  background: linear-gradient(135deg, #e3bfbf, #e3bfbf);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   padding: 2rem;
   border-radius: 8px;
