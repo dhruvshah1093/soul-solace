@@ -16,7 +16,7 @@
           href="#about"
           :class="{ active: activeTab === 'about' }"
           @click="activeTab = 'about'"
-          >About</a
+          >About Me</a
         >
         <a
           href="#services"

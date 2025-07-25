@@ -5,7 +5,7 @@
       <div class="profile-text">
         <h2 class="name">{{ name }}</h2>
         <p class="bio-text">{{ bio }}</p>
-        <button class="outlined-btn">Explore Services</button>
+        <button class="outlined-btn" onclick="">Explore Services</button>
       </div>
     </div>
   </section>
@@ -33,7 +33,7 @@ defineProps(['photo', 'name', 'bio'])
   padding: 1rem;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  width: 95%;
   gap: 2rem;
 }
 
