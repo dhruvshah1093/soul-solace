@@ -5,7 +5,7 @@
       <div class="profile-text">
         <h2 class="name">{{ name }}</h2>
         <p class="bio-text">{{ bio }}</p>
-        <button class="outlined-btn" onclick="">Explore Services</button>
+        <button class="outlined-btn" @click="scrollToServices">Explore Services</button>
       </div>
     </div>
   </section>
@@ -13,6 +13,13 @@
 
 <script setup>
 defineProps(['photo', 'name', 'bio'])
+
+function scrollToServices() {
+  const el = document.getElementById('services')
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
 
 <style scoped>
