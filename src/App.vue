@@ -1,10 +1,10 @@
 <template>
   <div>
     <header class="navbar">
-      <div class="brand">
+      <a href="#hero" class="brand" @click="activeTab = 'hero'">
         <img src="/logo.png" alt="Soul Solace Therapy logo" class="logo" />
         <span class="title">Soul Solace Therapy</span>
-      </div>
+      </a>
       <nav>
         <a
           href="#hero"
@@ -130,6 +130,9 @@ nav a.active {
 .brand {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .logo {
   height:50px;
