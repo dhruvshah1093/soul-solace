@@ -33,13 +33,13 @@ defineProps(['photo', 'name', 'bio'])
   padding: 1rem;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 80%;
   gap: 2rem;
 }
 
 .profile-photo {
   border-radius: 12px;
-  width: 320px;
+  width: 380px;
   height: auto;
   object-fit: cover;
   flex-shrink: 0;
@@ -47,16 +47,18 @@ defineProps(['photo', 'name', 'bio'])
 
 .profile-text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .name {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
 
 .bio-text {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: #555;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -72,8 +74,7 @@ defineProps(['photo', 'name', 'bio'])
   background: transparent;
   border-radius: 8px;
   font-size: large;
-  justify-content:right;
-  align-items:end;
+  align-self: flex-end;
 }
 
 .outlined-btn:hover {
@@ -86,6 +87,7 @@ defineProps(['photo', 'name', 'bio'])
   .profile-card {
     flex-direction: column;
     text-align: center;
+    width: 90%;
   }
 
   .profile-photo {
