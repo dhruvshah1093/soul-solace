@@ -45,6 +45,7 @@
           :key="service.title"
           :title="service.title"
           :description="service.description"
+          :image="service.image"
         />
       </section>
       <section id="contact">
@@ -89,7 +90,10 @@ onMounted(async () => {
   const slugs = ['therapy', 'anxiety', 'couples']
   for (const slug of slugs) {
     const res = await fetch(`/content/services/${slug}.md`)
-    services.value.push(parseFrontMatter(await res.text()))
+    services.value.push({
+      ...parseFrontMatter(await res.text()),
+      image: 'https://via.placeholder.com/300x200?text=Service+Image',
+    })
   }
 
   const contactRes = await fetch('/content/contact.json')
@@ -148,7 +152,7 @@ nav a.active {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   justify-items: center;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-evenly;
   align-content: space-evenly;
   min-height: 80vh;
