@@ -159,6 +159,13 @@ nav a.active {
   min-height: 80vh;
   width: 100%;
 }
+#contact {
+  background: #e6f4e6;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #about {
   min-height: 90vh;
   width: 100%;
