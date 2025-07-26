@@ -35,8 +35,8 @@ function scrollToServices() {
 .profile-card {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  background: #f7eeee;
+  align-items: stretch;
+  background: #839c7a;
   padding: 1rem;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -47,9 +47,9 @@ function scrollToServices() {
 .profile-photo {
   border-radius: 12px;
   width: 380px;
-  height: 410px;
   object-fit: cover;
   flex-shrink: 0;
+  align-self: stretch;
 }
 
 .profile-text {
@@ -62,6 +62,7 @@ function scrollToServices() {
   font-size: 2.8rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .bio-text {
