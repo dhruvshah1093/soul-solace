@@ -146,7 +146,8 @@ nav a.active {
 }
 #services.service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Display exactly three service cards per row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   justify-items: center;
   align-items: stretch;
