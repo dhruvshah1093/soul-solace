@@ -5,7 +5,7 @@
       <div class="profile-text">
         <h2 class="name">{{ name }}</h2>
         <p class="bio-text">{{ bio }}</p>
-        <button class="outlined-btn" @click="scrollToServices">Explore Services</button>
+        <button class="outlined-btn" @click="scrollToServices">Book an Appointment</button>
       </div>
     </div>
   </section>
@@ -39,7 +39,7 @@ function scrollToServices() {
   background: #ffffff; /* white box */
   animation: profile-emerge 1s ease-out;
   padding: 1rem;
-  border-radius: 80px;
+  border-radius: 50px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   width: 95%;
   gap: 2rem;

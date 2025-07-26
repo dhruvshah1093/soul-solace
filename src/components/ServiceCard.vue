@@ -19,7 +19,7 @@ defineProps({
 
 <style scoped>
 .card {
-  background: #839c7a;
+  background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   padding: 1.5rem;
   /* More rounded corners for a softer look */

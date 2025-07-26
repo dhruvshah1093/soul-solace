@@ -49,7 +49,6 @@
         />
       </section>
       <section id="contact">
-        <ContactInfo :email="contact.email" :phone="contact.phone" :address="contact.address" />
         <ContactForm />
       </section>
     </main>
@@ -143,6 +142,9 @@ nav a.active {
   color: rgb(15, 15, 17);
   font-weight: bold;
   font-size: 1.5rem;
+}
+#services{
+  background: #e6f4e6;
 }
 #services.service-grid {
   display: grid;
