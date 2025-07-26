@@ -36,7 +36,8 @@ function scrollToServices() {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  background: #839c7a;
+  background: #ffffff; /* white box */
+  animation: profile-emerge 1s ease-out;
   padding: 1rem;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -105,6 +106,17 @@ function scrollToServices() {
 
   .profile-text {
     max-width: 90%;
+  }
+}
+
+@keyframes profile-emerge {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 </style>
