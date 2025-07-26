@@ -1,5 +1,5 @@
 ---
-title: Anxiety Management
-description: Strategies and tools to manage anxiety, reduce overwhelm, and build emotional resilience.
-image: https://via.placeholder.com/300x200?text=Anxiety+Management
+title: Trauma & PTSD
+description: Specialized therapy for individuals who have experienced trauma, including childhood trauma, abuse, or PTSD. We utilize trauma-informed approaches to help you process and heal safely.
+image: /uploads/profile.jpg
 ---

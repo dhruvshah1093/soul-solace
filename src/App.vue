@@ -87,7 +87,7 @@ onMounted(async () => {
   const aboutRes = await fetch('/content/about.md')
   aboutContent.value = parseFrontMatter(await aboutRes.text())
 
-  const slugs = ['therapy', 'anxiety', 'couples']
+  const slugs = ['therapy', 'anxiety', 'couples', 'attachment_relation', 'emdr', 'cbt']
   for (const slug of slugs) {
     const res = await fetch(`/content/services/${slug}.md`)
     services.value.push(parseFrontMatter(await res.text()))
