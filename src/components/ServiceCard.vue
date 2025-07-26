@@ -22,7 +22,8 @@ defineProps({
   background: #839c7a;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   padding: 1.5rem;
-  border-radius: 8px;
+  /* More rounded corners for a softer look */
+  border-radius: 16px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -35,7 +36,8 @@ defineProps({
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 4px;
+  /* Match the card's curvature */
+  border-radius: 12px;
   margin-bottom: 1rem;
 }
 
