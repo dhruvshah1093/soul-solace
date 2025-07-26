@@ -24,12 +24,12 @@ defineProps({
   padding: 1.5rem;
   /* More rounded corners for a softer look */
   border-radius: 16px;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 350px;
+  min-height: 200px;
 }
 
 .service-image {

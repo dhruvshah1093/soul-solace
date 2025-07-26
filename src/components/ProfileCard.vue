@@ -28,7 +28,7 @@ function scrollToServices() {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff; /* Light background to match SPA sections */
+  background: #e6f4e6; /* Light background to match SPA sections */
   padding: 2rem;
 }
 
@@ -39,7 +39,7 @@ function scrollToServices() {
   background: #ffffff; /* white box */
   animation: profile-emerge 1s ease-out;
   padding: 1rem;
-  border-radius: 16px;
+  border-radius: 80px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   width: 95%;
   gap: 2rem;
@@ -75,11 +75,11 @@ function scrollToServices() {
 
 /* Button */
 .outlined-btn {
-  border: 2px solid #e3bfbf;
+  border: 2px solid #839c7a;
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0.6em 1.2em;
-  color: #e3bfbf;
+  color: #839c7a;
   background: transparent;
   border-radius: 8px;
   font-size: large;
@@ -87,7 +87,7 @@ function scrollToServices() {
 }
 
 .outlined-btn:hover {
-  background: #fff4f4;
+  background: #d2eec7;
   color: rgb(148, 139, 139);
 }
 
