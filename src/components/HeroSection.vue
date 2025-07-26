@@ -44,10 +44,10 @@ defineProps(['title', 'message'])
   align-items: center;
   text-align: center;
   padding: 0.6em 1.2em;
-  color: #e3bfbf;
+  color: #839c7a;
   background: transparent;
   border-radius: 8px;
-  box-shadow: 0 0 20px 4px rgba(255, 186, 186, 0.844);
+  box-shadow: 0 0 20px 4px #8ea387;
   animation: emerge 10s ease-out forwards;
   transform: translateZ(-50px);
   font-size: large;
@@ -59,7 +59,7 @@ defineProps(['title', 'message'])
     opacity: 0;
   }
   to {
-    top:53%;
+    top:60%;
     opacity: 1;
   }
 }

@@ -47,7 +47,7 @@ function scrollToServices() {
 .profile-photo {
   border-radius: 12px;
   width: 380px;
-  height: auto;
+  height: 410px;
   object-fit: cover;
   flex-shrink: 0;
 }

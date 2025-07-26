@@ -3,7 +3,7 @@
     <header class="navbar">
       <a href="#hero" class="brand" @click="activeTab = 'hero'">
         <img src="/logo.png" alt="Soul Solace Therapy logo" class="logo" />
-        <span class="title">Soul Solace Therapy</span>
+        <span class="title">Soul Solace Psychotherapy</span>
       </a>
       <nav>
         <a
@@ -99,7 +99,7 @@ onMounted(async () => {
 
 <style scoped>
 .navbar {
-  background: #e3bfbf;
+  background: #839c7a;
   padding-top: 2rem;
   padding-bottom: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -139,6 +139,7 @@ nav a.active {
   margin-right: 1rem;
 }
 .title {
+  color: rgb(15, 15, 17);
   font-weight: bold;
   font-size: 1.5rem;
 }
