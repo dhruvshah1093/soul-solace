@@ -148,7 +148,8 @@ nav a.active {
   display: grid;
   /* Display exactly three service cards per row */
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  /* Provide a small gap between service cards */
+  gap: 1rem;
   justify-items: center;
   align-items: stretch;
   justify-content: space-evenly;
