@@ -90,10 +90,7 @@ onMounted(async () => {
   const slugs = ['therapy', 'anxiety', 'couples']
   for (const slug of slugs) {
     const res = await fetch(`/content/services/${slug}.md`)
-    services.value.push({
-      ...parseFrontMatter(await res.text()),
-      image: 'https://via.placeholder.com/300x200?text=Service+Image',
-    })
+    services.value.push(parseFrontMatter(await res.text()))
   }
 
   const contactRes = await fetch('/content/contact.json')

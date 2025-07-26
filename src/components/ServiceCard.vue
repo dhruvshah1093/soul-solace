@@ -19,7 +19,7 @@ defineProps({
 
 <style scoped>
 .card {
-  background: linear-gradient(135deg, #e3bfbf, #e3bfbf);
+  background: #839c7a;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   padding: 1.5rem;
   border-radius: 8px;
