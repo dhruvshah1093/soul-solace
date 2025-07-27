@@ -50,7 +50,7 @@ defineProps(['title', 'message'])
   border-radius: 8px;
   box-shadow: 0 0 20px 4px #8ea387;
   animation: emerge 10s ease-out forwards;
-  transform: translateX(-50%) translateZ(-50px) scale(2);
+  transform: translateX(-50%) translateZ(-50px) scale(1.3);
   font-size: large;
 }
 

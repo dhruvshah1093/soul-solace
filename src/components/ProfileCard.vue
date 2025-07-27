@@ -30,6 +30,7 @@ function scrollToServices() {
   align-items: center;
   background: #e6f4e6; /* Light background to match SPA sections */
   padding: 2rem;
+  /* width:100%; */
 }
 
 .profile-card {
@@ -39,7 +40,7 @@ function scrollToServices() {
   background: #ffffff; /* white box */
   animation: profile-emerge 1s ease-out;
   padding: 1rem;
-  border-radius: 50px;
+  border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   width: 95%;
   gap: 2rem;

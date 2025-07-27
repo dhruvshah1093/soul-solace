@@ -83,7 +83,7 @@ onMounted(async () => {
   const homeRes = await fetch('/content/home.md')
   homeContent.value = parseFrontMatter(await homeRes.text())
 
-  const aboutRes = await fetch('/content/about.md')
+  const aboutRes = await fetch('public/content/about.md')
   aboutContent.value = parseFrontMatter(await aboutRes.text())
 
   const slugs = ['therapy', 'anxiety', 'couples', 'attachment_relation', 'emdr', 'cbt']
