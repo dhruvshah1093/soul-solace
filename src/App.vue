@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="navbar">
-      <a href="#hero" class="brand" @click="activeTab = 'hero'">
+      <a href="#" class="brand" @click.prevent="reloadPage">
         <img src="/logo.png" alt="Soul Solace Therapy logo" class="logo" />
         <span class="title">Soul Solace Psychotherapy</span>
       </a>
@@ -68,6 +68,10 @@ const homeContent = ref({ title: '', message: '' })
 const aboutContent = ref({ photo: '', name: '', bio: '' })
 const services = ref([])
 const contact = ref({ email: '', phone: '', address: '' })
+
+function reloadPage() {
+  window.location.reload()
+}
 
 function parseFrontMatter(text) {
   const [, frontMatter] = text.match(/---\n([\s\S]*?)\n---/)
