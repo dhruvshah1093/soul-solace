@@ -165,6 +165,8 @@ nav a.active {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 90vh;
+  width: 100%;
 }
 #about {
   min-height: 90vh;

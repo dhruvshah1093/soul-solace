@@ -13,18 +13,24 @@
 <style scoped>
   .form-container {
     background: #ffffff;
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 800px;
+    width: 100%;
     margin: 0 auto;
   }
   form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    font-size: 1.2rem;
   }
 input, textarea {
-  padding: 0.75rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+button {
+  font-size: 1.2rem;
 }
 </style>
