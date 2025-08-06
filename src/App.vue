@@ -189,6 +189,10 @@ nav a.active {
   width: 100%;
 }
 
+main{
+
+}
+
 section {
   scroll-margin-top: 80px;
 }

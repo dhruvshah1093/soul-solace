@@ -3,6 +3,7 @@
     <div class="content-header">
           <h2 class="name">{{ name }} </h2>
           <h2 class="subtitle">{{ subtitle }}</h2>
+          <button class="outlined-btn" @click="scrollToServices">Book an Appointment</button>
     </div>    
     <div class="profile-header">
       <img :src="photo" alt="Profile" class="profile-photo" />
@@ -10,12 +11,11 @@
         <p class="">{{ degree }}</p>
         <p class="">{{ experience }}</p>
         <p class="">{{ langauges }}</p>
-        <p class="">{{ availbility }}</p>
       </div>
     </div>
     <div class="profile-text">
       <p class="bio-text">{{ bio }}</p>
-      <button class="outlined-btn" @click="scrollToServices">Book an Appointment</button>
+
     </div>
   </section>
 </template>
@@ -98,6 +98,7 @@ function scrollToServices() {
   border-radius: 8px;
   font-size: large;
   align-self: flex-end;
+  margin-top: 4rem;
 }
 
 .outlined-btn:hover {
@@ -133,7 +134,7 @@ function scrollToServices() {
   /* align-items: center; */
   max-height: 45vh;
   background: #ffffff; /* white box */
-  width:60%;
+  width:100%;
 }
 
 .profile-photo {
@@ -154,8 +155,9 @@ function scrollToServices() {
 }
 
 .content-header {
-  display: flex;
-  align-items: baseline; /* ✅ Aligns subtitle text to the baseline of name */
+  display:flex;
+  align-items: baseline;
+  width:100%;
 }
 
 .subtitle {
@@ -166,7 +168,6 @@ function scrollToServices() {
   font-size: large;
   padding: 1rem;
   font-weight: bold;
-  width: 100%;
   display: block;
 }
 
