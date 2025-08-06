@@ -18,7 +18,6 @@ defineProps(['title', 'message'])
   background-image: url('/uploads/Introduction.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat:repeat-x;
 }
 
 .overlay {

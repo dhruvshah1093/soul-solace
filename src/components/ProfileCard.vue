@@ -1,6 +1,5 @@
 <template>
   <section class="profile-section">
-    <div class="profile-overlay"></div>
     <div class="profile-content">
       <div class="content-header">
             <h2 class="name">{{ name }} </h2>
@@ -15,10 +14,24 @@
           <p class="">{{ langauges }}</p>
         </div>
       </div>
-      <div class="profile-text">
+    </div>
+    <div class="profile-overlay">
+      <div class="content-header" v-show="false">
+            <h2 class="name" v-show="false">{{ name }} </h2>
+            <h2 class="subtitle" v-show="false">{{ subtitle }}</h2>
+            <button class="outlined-btn" v-show="false" @click="scrollToServices">Book an Appointment</button>
+      </div>
+      <div class="profile-header">
+        <img :src="photo" alt="Profile" class="profile-photo"  hidden/>
+        <div class="summary">
+          <p class="" hidden>{{ degree }}</p>
+          <p class="" hidden>{{ experience }}</p>
+          <p class="" hidden>{{ langauges }}</p>
+        </div>
+      </div>
+      <div class="profilse-text">
         <p class="bio-text">{{ bio }}</p>
       </div>
-      <p class="availability-text">{{ availbility }}</p>
     </div>
   </section>
 </template>
@@ -42,6 +55,7 @@ function scrollToServices() {
   padding: 2rem;
   width:100%;
   position: relative;
+  min-height: 100vh;
 }
 
 .profile-overlay {
@@ -51,7 +65,10 @@ function scrollToServices() {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.05);
-  z-index: 0;
+  z-index: 100;
+  justify-items: center;
+  align-items: center;
+
 }
 
 .profile-content {
@@ -59,43 +76,12 @@ function scrollToServices() {
   z-index: 1;
 }
 
-.availability-text {
-  text-align: right;
-  font-size: 1.25rem;
-  color: #555;
-  margin-top: 1.5rem;
-}
-
-.profile-card {
-  height: 70vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-
-  animation: profile-emerge 1s ease-out;
-  padding: 1rem;
-  border-radius: 30px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  width: 60%;
-  gap: 2rem;
-}
-
-/* .profile-photo {
-  border-radius: 12px;
-  width: 400px;
-  height: 350px;
-  object-fit: cover;
-  flex-shrink: 0;
-  align-self: stretch;
-} */
-
-
 .profile-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  z-index: 10000;
+  width: 55%;
+  background-color: #89a189;
+  border-radius: 2rem;
+  margin-top: 16rem;
+  margin-left: 20rem;
 }
 
 .name {
@@ -107,7 +93,8 @@ function scrollToServices() {
 }
 
 .bio-text {
-  font-size: 1.25rem;
+  padding: 0.1em 1.2em;
+  font-size: 1rem;
   color: #555;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -123,8 +110,7 @@ function scrollToServices() {
   background: transparent;
   border-radius: 8px;
   font-size: large;
-  align-self: flex-end;
-  margin-top: 4rem;
+  float: right;
 }
 
 .outlined-btn:hover {
@@ -160,7 +146,7 @@ function scrollToServices() {
   /* align-items: center; */
   max-height: 45vh;
   background: #ffffff; /* white box */
-  width:100%;
+  width:95%;
 }
 
 .profile-photo {
@@ -192,8 +178,6 @@ function scrollToServices() {
 }
 .summary{
   font-size: large;
-  padding: 1rem;
-  font-weight: bold;
   display: block;
 }
 
