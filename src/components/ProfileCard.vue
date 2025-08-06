@@ -155,9 +155,9 @@ function scrollToServices() {
 }
 
 .content-header {
-  display:flex;
+  display: flex;
   align-items: baseline;
-  width:100%;
+  width: 100vw;
 }
 
 .subtitle {
