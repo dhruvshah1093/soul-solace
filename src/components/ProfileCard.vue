@@ -1,21 +1,24 @@
 <template>
   <section class="profile-section">
-    <div class="content-header">
-          <h2 class="name">{{ name }} </h2>
-          <h2 class="subtitle">{{ subtitle }}</h2>
-          <button class="outlined-btn" @click="scrollToServices">Book an Appointment</button>
-    </div>    
-    <div class="profile-header">
-      <img :src="photo" alt="Profile" class="profile-photo" />
-      <div class="summary">
-        <p class="">{{ degree }}</p>
-        <p class="">{{ experience }}</p>
-        <p class="">{{ langauges }}</p>
+    <div class="profile-overlay"></div>
+    <div class="profile-content">
+      <div class="content-header">
+            <h2 class="name">{{ name }} </h2>
+            <h2 class="subtitle">{{ subtitle }}</h2>
+            <button class="outlined-btn" @click="scrollToServices">Book an Appointment</button>
       </div>
-    </div>
-    <div class="profile-text">
-      <p class="bio-text">{{ bio }}</p>
-
+      <div class="profile-header">
+        <img :src="photo" alt="Profile" class="profile-photo" />
+        <div class="summary">
+          <p class="">{{ degree }}</p>
+          <p class="">{{ experience }}</p>
+          <p class="">{{ langauges }}</p>
+        </div>
+      </div>
+      <div class="profile-text">
+        <p class="bio-text">{{ bio }}</p>
+      </div>
+      <p class="availability-text">{{ availbility }}</p>
     </div>
   </section>
 </template>
@@ -38,6 +41,29 @@ function scrollToServices() {
   background: #e6f4e6; /* Light background to match SPA sections */
   padding: 2rem;
   width:100%;
+  position: relative;
+}
+
+.profile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: 0;
+}
+
+.profile-content {
+  position: relative;
+  z-index: 1;
+}
+
+.availability-text {
+  text-align: right;
+  font-size: 1.25rem;
+  color: #555;
+  margin-top: 1.5rem;
 }
 
 .profile-card {
