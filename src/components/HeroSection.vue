@@ -2,7 +2,7 @@
   <section class="hero">
     <div class="overlay">
       <p class="guiding-light">{{ message }}</p>
-      <button class="overlay-message">Get Started</button>
+      <button class="overlay-button">Get Started</button>
     </div>
   </section>
 </template>
@@ -14,11 +14,11 @@ defineProps(['title', 'message'])
 <style scoped>
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 100vh;
   background-image: url('/uploads/Introduction.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat:repeat-x;
 }
 
 .overlay {
@@ -37,7 +37,7 @@ defineProps(['title', 'message'])
   perspective: 800px;
 }
 
-.overlay-message {
+.overlay-button {
   position: absolute;
   left: 50%;
   display: flex;
@@ -64,6 +64,7 @@ defineProps(['title', 'message'])
     opacity: 1;
   }
 }
+
 .guiding-light {
   position: absolute;
   top: 100%;

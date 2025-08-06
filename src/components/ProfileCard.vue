@@ -1,19 +1,28 @@
 <template>
   <section class="profile-section">
-    <div class="profile-card">
+    <div class="content-header">
+          <h2 class="name">{{ name }} </h2>
+          <h2 class="subtitle">{{ subtitle }}</h2>
+    </div>    
+    <div class="profile-header">
       <img :src="photo" alt="Profile" class="profile-photo" />
-      <div class="profile-text">
-        <h2 class="name">{{ name }}</h2>
-        <p class="bio-text">{{ bio }}</p>
-        <button class="outlined-btn" @click="scrollToServices">Book an Appointment</button>
+      <div class="summary">
+        <p class="">{{ degree }}</p>
+        <p class="">{{ experience }}</p>
+        <p class="">{{ langauges }}</p>
+        <p class="">{{ availbility }}</p>
       </div>
+    </div>
+    <div class="profile-text">
+      <p class="bio-text">{{ bio }}</p>
+      <button class="outlined-btn" @click="scrollToServices">Book an Appointment</button>
     </div>
   </section>
 </template>
 
-<script setup>
-defineProps(['photo', 'name', 'bio'])
 
+<script setup>
+defineProps(['photo', 'name', 'subtitle', 'degree', 'experience', 'langauges', 'availbility', 'bio'])
 function scrollToServices() {
   const el = document.getElementById('services')
   if (el) {
@@ -24,47 +33,51 @@ function scrollToServices() {
 
 <style scoped>
 .profile-section {
-  min-height: 90vh; /* Almost full screen */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  align-items: left;
   background: #e6f4e6; /* Light background to match SPA sections */
   padding: 2rem;
-  /* width:100%; */
+  width:100%;
 }
 
 .profile-card {
+  height: 70vh;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  background: #ffffff; /* white box */
+
   animation: profile-emerge 1s ease-out;
   padding: 1rem;
-  border-radius: 16px;
+  border-radius: 30px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  width: 95%;
+  width: 60%;
   gap: 2rem;
 }
 
-.profile-photo {
+/* .profile-photo {
   border-radius: 12px;
-  width: 380px;
+  width: 400px;
+  height: 350px;
   object-fit: cover;
   flex-shrink: 0;
   align-self: stretch;
-}
+} */
+
 
 .profile-text {
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 60%;
+  z-index: 10000;
 }
 
 .name {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  text-align: center;
+  justify-items: center;
+  align-items: center;
 }
 
 .bio-text {
@@ -100,11 +113,6 @@ function scrollToServices() {
     width: 90%;
   }
 
-  .profile-photo {
-    width: 80%;
-    margin-bottom: 1rem;
-  }
-
   .profile-text {
     max-width: 90%;
   }
@@ -120,4 +128,46 @@ function scrollToServices() {
     opacity: 1;
   }
 }
+.profile-header {
+  display: flex;
+  /* align-items: center; */
+  max-height: 45vh;
+  background: #ffffff; /* white box */
+  width:60%;
+}
+
+.profile-photo {
+  border-radius: 12px;
+  width: 400px;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.profile-header .name {
+  background: white;
+  height:fit-content;
+}
+.name {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 1rem; /* remove default margin */
+}
+
+.content-header {
+  display: flex;
+  align-items: baseline; /* ✅ Aligns subtitle text to the baseline of name */
+}
+
+.subtitle {
+  color: #A41;
+  align-items: baseline;
+}
+.summary{
+  font-size: large;
+  padding: 1rem;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+}
+
 </style>

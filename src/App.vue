@@ -37,9 +37,10 @@
         <HeroSection :title="homeContent.title" :message="homeContent.message" />
       </section>
       <section id="about">
-        <ProfileCard :photo="aboutContent.photo" :name="aboutContent.name" :bio="aboutContent.bio" />
+        <ProfileCard :photo="aboutContent.photo" :name="aboutContent.name" :subtitle="aboutContent.subtitle" :degree="aboutContent.degree" :experience="aboutContent.experience" :langauges="aboutContent.langauges" :availbility="aboutContent.availbility" :bio="aboutContent.bio" />
       </section>
       <section id="services" class="service-grid">
+        <h2>Services Offered</h2>
         <ServiceCard
           v-for="service in services"
           :key="service.title"
@@ -65,7 +66,7 @@ import ContactForm from '@/components/ContactForm.vue'
 
 const activeTab = ref('hero')
 const homeContent = ref({ title: '', message: '' })
-const aboutContent = ref({ photo: '', name: '', bio: '' })
+const aboutContent = ref({ photo: '', name: '', subtitle: '', degree: '', experience: '', langauges: '', availbility: '', bio: '' })
 const services = ref([])
 const contact = ref({ email: '', phone: '', address: '' })
 
@@ -89,7 +90,7 @@ onMounted(async () => {
 
   const aboutRes = await fetch('public/content/about.md')
   aboutContent.value = parseFrontMatter(await aboutRes.text())
-
+  
   const slugs = ['therapy', 'anxiety', 'couples', 'attachment_relation', 'emdr', 'cbt']
   for (const slug of slugs) {
     const res = await fetch(`/content/services/${slug}.md`)
@@ -104,8 +105,9 @@ onMounted(async () => {
 <style scoped>
 .navbar {
   background: #839c7a;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  /* padding-top: 2rem; */
+  /* padding-bottom: 1rem; */
+  padding-right: 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
@@ -143,9 +145,19 @@ nav a.active {
   margin-right: 1rem;
 }
 .title {
-  color: rgb(15, 15, 17);
+  color: srgb(15, 15, 17);
   font-weight: bold;
   font-size: 1.5rem;
+}
+#hero{
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#about{
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 #services{
   background: #e6f4e6;
@@ -177,11 +189,8 @@ nav a.active {
   width: 100%;
 }
 
-main {
-  padding-top: 80px;
-}
-
 section {
   scroll-margin-top: 80px;
 }
+
 </style>
