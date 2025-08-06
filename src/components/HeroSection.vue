@@ -67,8 +67,11 @@ defineProps(['title', 'message'])
 .guiding-light {
   position: absolute;
   top: 100%;
-  width: 75%;
-  font-size: xx-large;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 75%;
+  font-size: clamp(1.25rem, 3vw, 2.5rem);
   color: #a69c98;
   display: flex;
   justify-content: center;
@@ -76,6 +79,13 @@ defineProps(['title', 'message'])
   text-align: center;
   padding-top: 1rem;
   animation: slide-up-2 12s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .guiding-light {
+    max-width: 90%;
+    font-size: clamp(1rem, 5vw, 2rem);
+  }
 }
 
 @keyframes slide-up-2 {
