@@ -29,7 +29,7 @@
           <p class="" hidden>{{ langauges }}</p>
         </div>
       </div>
-      <div class="profilse-text">
+      <div class="bio-container">
         <p class="bio-text">{{ bio }}</p>
       </div>
     </div>
@@ -63,12 +63,11 @@ function scrollToServices() {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.05);
+  min-height: 100vh;
+  background: #89a189;
   z-index: 100;
-  justify-items: center;
-  align-items: center;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-content {
@@ -76,12 +75,12 @@ function scrollToServices() {
   z-index: 1;
 }
 
-.profile-text {
-  width: 55%;
+.bio-container {
+  flex: 1;
   background-color: #89a189;
-  border-radius: 2rem;
-  margin-top: 16rem;
-  margin-left: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .name {
@@ -126,7 +125,7 @@ function scrollToServices() {
     width: 90%;
   }
 
-  .profile-text {
+  .bio-container {
     max-width: 90%;
   }
 }
