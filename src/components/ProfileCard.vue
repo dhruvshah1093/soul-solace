@@ -60,10 +60,10 @@ function scrollToServices() {
 
 .profile-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100vh;
+  top: 25%;
+  left: 22%;
+  width: 65%;
+  min-height: 0vh;
   background: #89a189;
   z-index: 100;
   display: flex;
@@ -77,7 +77,7 @@ function scrollToServices() {
 
 .bio-container {
   flex: 1;
-  background-color: #89a189;
+  background-color: rgba(137, 160, 85, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +93,7 @@ function scrollToServices() {
 
 .bio-text {
   padding: 0.1em 1.2em;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
   margin-bottom: 1.5rem;

@@ -14,7 +14,7 @@ defineProps(['title', 'message'])
 <style scoped>
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 99vh;
   background-image: url('/uploads/Introduction.jpg');
   background-size: cover;
   background-position: center;
