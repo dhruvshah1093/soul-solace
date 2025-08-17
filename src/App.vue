@@ -61,8 +61,8 @@ import { ref, onMounted } from 'vue'
 import HeroSection from '@/components/HeroSection.vue'
 import ProfileCard from '@/components/ProfileCard.vue'
 import ServiceCard from '@/components/ServiceCard.vue'
-import ContactInfo from '@/components/ContactInfo.vue'
 import ContactForm from '@/components/ContactForm.vue'
+import ContactInfo from '@/components/ContactInfo.vue'
 
 const activeTab = ref('hero')
 const homeContent = ref({ title: '', message: '' })
@@ -105,8 +105,6 @@ onMounted(async () => {
 <style scoped>
 .navbar {
   background: #839c7a;
-  /* padding-top: 2rem; */
-  /* padding-bottom: 1rem; */
   padding-right: 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -118,10 +116,12 @@ onMounted(async () => {
   width: 100%;
   z-index: 1000;
 }
+
 nav {
   display: flex;
   gap: 1.5rem;
 }
+
 nav a {
   font-size: large;
   color: #000;
@@ -129,10 +129,12 @@ nav a {
   text-decoration: none;
   border-bottom: 2px solid transparent;
 }
+
 nav a.active {
   border-bottom-color: #000;
   font-weight: bold;
 }
+
 .brand {
   display: flex;
   align-items: center;
@@ -140,28 +142,34 @@ nav a.active {
   color: inherit;
   cursor: pointer;
 }
+
 .logo {
   height:50px;
   margin-right: 1rem;
 }
+
 .title {
   color: srgb(15, 15, 17);
   font-weight: bold;
   font-size: 1.5rem;
 }
+
 #hero{
   top: 0;
   left: 0;
   width: 100%;
 }
+
 #about{
   top: 0;
   left: 0;
   width: 100%;
 }
+
 #services{
   background: #e6f4e6;
 }
+
 #services.service-grid {
   display: grid;
   /* Display exactly three service cards per row */
@@ -175,6 +183,7 @@ nav a.active {
   min-height: 80vh;
   width: 100%;
 }
+
 #contact {
   background: #e6f4e6;
   padding: 4rem 0;
@@ -184,13 +193,10 @@ nav a.active {
   min-height: 90vh;
   width: 100%;
 }
+
 #about {
   min-height: 90vh;
   width: 100%;
-}
-
-main{
-
 }
 
 section {

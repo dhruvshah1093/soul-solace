@@ -2,13 +2,19 @@
   <section class="hero">
     <div class="overlay">
       <p class="guiding-light">{{ message }}</p>
-      <button class="overlay-button">Get Started</button>
+      <button class="overlay-button" @click="scrollToServices">Get Started</button>
     </div>
   </section>
 </template>
 
 <script setup>
 defineProps(['title', 'message'])
+function scrollToServices() {
+  const el = document.getElementById('contact')
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
 
 <style scoped>
