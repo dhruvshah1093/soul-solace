@@ -1,35 +1,24 @@
 <template>
   <section class="profile-section">
-    <div class="profile-content">
-      <div class="content-header">
-            <h2 class="name">{{ name }} </h2>
-            <h2 class="subtitle">{{ subtitle }}</h2>
-      </div>
-      <div class="profile-header">
+    <div class="content-header">
+      <h2 class="name">{{ name }} </h2>
+      <h2 class="subtitle">{{ subtitle }}</h2>
+    </div>
+    
+    <div class="profile-grid">
+      <div class="photo-only">
         <img :src="photo" alt="Profile" class="profile-photo" />
+      </div>
+
+      <div class="profile-info">
         <div class="summary">
           <p class="">{{ degree }}</p>
           <p class="">{{ experience }}</p>
           <p class="">{{ langauges }}</p>
         </div>
-      </div>
-    </div>
-    <div class="profile-overlay">
-      <div class="content-header" v-show="false">
-            <h2 class="name" v-show="false">{{ name }} </h2>
-            <h2 class="subtitle" v-show="false">{{ subtitle }}</h2>
-            <button class="outlined-btn" v-show="false" @click="scrollToServices">Book an Appointment</button>
-      </div>
-      <div class="profile-header">
-        <img :src="photo" alt="Profile" class="profile-photo"  hidden/>
-        <div class="summary">
-          <p class="" hidden>{{ degree }}</p>
-          <p class="" hidden>{{ experience }}</p>
-          <p class="" hidden>{{ langauges }}</p>
+        <div class="bio-container">
+          <p class="bio-text">{{ bio }}</p>
         </div>
-      </div>
-      <div class="bio-container">
-        <p class="bio-text">{{ bio }}</p>
       </div>
     </div>
     <div class="cta-container">
@@ -51,46 +40,55 @@ function scrollToServices() {
 
 <style scoped>
 .profile-section {
-  /* justify-content: center; */
   align-items: left;
-  background: #e6f4e6; /* Light background to match SPA sections */
+  background: #e6f4e6;
   padding: 2rem;
-  width:100%;
+  width: 100%;
   position: relative;
   min-height: 100vh;
 }
-
-.profile-overlay {
-  position: absolute;
-  top: 27%;
-  left: 25%;
-  width: 65%;
-  min-height: 0vh;
-  background: #89a189;
-  z-index: 100;
+.content-header {
   display: flex;
-  flex-direction: column;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 2rem;
 }
-
-.profile-content {
-  position: relative;
-  z-index: 1;
+.profile-grid {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  align-items: flex-start;
+  width: 95%;
 }
-
+.photo-only {
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 1rem;
+}
+.profile-photo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+}
 .bio-container {
   flex: 1;
-  background-color: rgba(171, 180, 149, 0.2);
+  background-color: rgba(150, 195, 36, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 90%;
+  border-radius: 0 20px 20px 0 ;
 }
-
 .name {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 500;
-  margin-bottom: 1rem;
-  justify-items: center;
-  align-items: center;
+}
+.subtitle {
+  color: #A41;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  margin-top: 0;
 }
 
 .bio-text {
@@ -100,8 +98,6 @@ function scrollToServices() {
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-
-/* Button */
 .outlined-btn {
   border: 2px solid #839c7a;
   cursor: pointer;
@@ -111,24 +107,23 @@ function scrollToServices() {
   background: transparent;
   border-radius: 8px;
   font-size: large;
+  align-self: flex-start;
 }
-
 .outlined-btn:hover {
   background: #d2eec7;
   color: rgb(148, 139, 139);
 }
-
-/* Responsive */
-@media (max-width: 900px) {
-  .profile-card {
-    flex-direction: column;
-    text-align: center;
-    width: 90%;
-  }
-
-  .bio-container {
-    max-width: 90%;
-  }
+.summary {
+  font-size: larger;
+  background-color: white;
+  padding: 1rem;
+  width: fit-content;
+}
+.cta-container {
+  display: flex;
+  width: 95%;
+  justify-content: flex-end;
+  margin-top: 5rem;
 }
 
 @keyframes profile-emerge {
@@ -141,51 +136,45 @@ function scrollToServices() {
     opacity: 1;
   }
 }
-.profile-header {
-  display: flex;
-  /* align-items: center; */
-  max-height: 45vh;
-  background: #ffffff; /* white box */
-  width:95%;
+
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+
+  }
+
+  .photo-only {
+    justify-content: center;
+    
+  }
+
+  .cta-container {
+    justify-content: center;
+  }
 }
 
-.profile-photo {
-  border-radius: 12px;
-  width: 400px;
-  height: 350px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-.profile-header .name {
-  background: white;
-  height:fit-content;
-}
-.name {
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin: 1rem; /* remove default margin */
-}
+@media (max-width: 600px) {
+  .profile-section {
+    padding: 1rem;
+    min-height: auto;
+  }
 
-.content-header {
-  display: flex;
-  align-items: baseline;
-  width: 100vw;
-}
+  .name {
+    font-size: 1.5rem;
+  }
 
-.subtitle {
-  color: #A41;
-  align-items: baseline;
-}
-.summary{
-  font-size: large;
-  display: block;
-}
+  .subtitle {
+    font-size: 1rem;
+  }
 
-.cta-container {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  margin-top: 1.5rem;
+  .profile-photo {
+    max-width: 200px;
+  }
+  .summary {
+    font-size: medium;
+  }
+  .content-header{
+   margin-bottom: 1rem;
+  }
 }
-
 </style>

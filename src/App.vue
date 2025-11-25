@@ -144,14 +144,48 @@ nav a.active {
 }
 
 .logo {
-  height:50px;
-  margin-right: 1rem;
+  height: 40px;
+  margin-right: 0.75rem;
 }
 
 .title {
   color: srgb(15, 15, 17);
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-right: 1rem;
+  }
+
+  .logo {
+    height: 32px;
+    margin-right: 0.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 28px;
+    margin-right: 0.4rem;
+  }
+
+  .title {
+    font-size: 0.875rem;
+  }
+
+  nav {
+    display: none;
+  }
 }
 
 #hero{

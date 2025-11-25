@@ -89,8 +89,12 @@ function scrollToServices() {
 
 @media (max-width: 768px) {
   .guiding-light {
-    max-width: 90%;
+    left: 45%;
+    max-width: 80%;
     font-size: clamp(1rem, 5vw, 2rem);
+  }
+  .overlay-button {
+    left: 45%;
   }
 }
 
