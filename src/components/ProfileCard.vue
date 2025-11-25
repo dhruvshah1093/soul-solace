@@ -4,7 +4,6 @@
       <div class="content-header">
             <h2 class="name">{{ name }} </h2>
             <h2 class="subtitle">{{ subtitle }}</h2>
-            <button class="outlined-btn" @click="scrollToServices">Book an Appointment</button>
       </div>
       <div class="profile-header">
         <img :src="photo" alt="Profile" class="profile-photo" />
@@ -32,6 +31,9 @@
       <div class="bio-container">
         <p class="bio-text">{{ bio }}</p>
       </div>
+    </div>
+    <div class="cta-container">
+      <button class="outlined-btn" @click="scrollToServices">Book an Appointment</button>
     </div>
   </section>
 </template>
@@ -109,7 +111,6 @@ function scrollToServices() {
   background: transparent;
   border-radius: 8px;
   font-size: large;
-  float: right;
 }
 
 .outlined-btn:hover {
@@ -178,6 +179,13 @@ function scrollToServices() {
 .summary{
   font-size: large;
   display: block;
+}
+
+.cta-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
 }
 
 </style>
