@@ -12,9 +12,11 @@
 
       <div class="profile-info">
         <div class="summary">
-          <p class="">{{ degree }}</p>
-          <p class="">{{ experience }}</p>
-          <p class="">{{ langauges }}</p>
+          <ul class="summary-list">
+            <li>{{ degree }}</li>
+            <li>{{ experience }}</li>
+            <li>{{ langauges }}</li>
+          </ul>
         </div>
         <div class="bio-container">
           <p class="bio-text">{{ bio }}</p>
@@ -51,7 +53,6 @@ function scrollToServices() {
   display: flex;
   align-items: baseline;
   width: 100%;
-  margin-bottom: 2rem;
 }
 .profile-grid {
   display: grid;
@@ -67,7 +68,6 @@ function scrollToServices() {
 }
 .profile-photo {
   width: 100%;
-  max-width: 300px;
   height: auto;
   object-fit: cover;
 }
@@ -77,22 +77,20 @@ function scrollToServices() {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  border-radius: 0 20px 20px 0 ;
+  border-radius: 0 20px 20px 20px ;
 }
 .name {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 500;
 }
 .subtitle {
   color: #A41;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-left: 1rem;
-  margin-top: 0;
 }
 
 .bio-text {
-  padding: 0.1em 1.2em;
+  padding: 1rem 5rem;
   font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
@@ -114,10 +112,19 @@ function scrollToServices() {
   color: rgb(148, 139, 139);
 }
 .summary {
-  font-size: larger;
   background-color: white;
   padding: 1rem;
-  width: fit-content;
+  width: 45%;
+}
+.summary-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style-type:square;
+}
+.summary-list li {
+  margin-bottom: 0.8rem;
+  color: #555;
+  font-size: 1.3rem;
 }
 .cta-container {
   display: flex;

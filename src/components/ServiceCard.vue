@@ -21,7 +21,6 @@ defineProps({
 .card {
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  padding: 1.5rem;
   /* More rounded corners for a softer look */
   border-radius: 16px;
   width: 90%;
@@ -29,25 +28,26 @@ defineProps({
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 200px;
+  min-height: 140px;
 }
 
 .service-image {
   width: 100%;
-  height: 200px;
+  height: 140px;
   object-fit: cover;
   /* Match the card's curvature */
   border-radius: 12px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .service-title {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 .service-description {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  padding: 0.75rem;
 }
 
 </style>
