@@ -12,25 +12,8 @@
           <p class="">{{ degree }}</p>
           <p class="">{{ experience }}</p>
           <p class="">{{ langauges }}</p>
+          <p class="bio-text">{{ bio }}</p>
         </div>
-      </div>
-    </div>
-    <div class="profile-overlay">
-      <div class="content-header" v-show="false">
-            <h2 class="name" v-show="false">{{ name }} </h2>
-            <h2 class="subtitle" v-show="false">{{ subtitle }}</h2>
-            <button class="outlined-btn" v-show="false" @click="scrollToServices">Book an Appointment</button>
-      </div>
-      <div class="profile-header">
-        <img :src="photo" alt="Profile" class="profile-photo"  hidden/>
-        <div class="summary">
-          <p class="" hidden>{{ degree }}</p>
-          <p class="" hidden>{{ experience }}</p>
-          <p class="" hidden>{{ langauges }}</p>
-        </div>
-      </div>
-      <div class="bio-container">
-        <p class="bio-text">{{ bio }}</p>
       </div>
     </div>
   </section>
@@ -58,29 +41,9 @@ function scrollToServices() {
   min-height: 100vh;
 }
 
-.profile-overlay {
-  position: absolute;
-  top: 27%;
-  left: 25%;
-  width: 65%;
-  min-height: 0vh;
-  background: #89a189;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-}
-
 .profile-content {
   position: relative;
   z-index: 1;
-}
-
-.bio-container {
-  flex: 1;
-  background-color: rgba(171, 180, 149, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .name {
@@ -92,11 +55,11 @@ function scrollToServices() {
 }
 
 .bio-text {
-  padding: 0.1em 1.2em;
-  font-size: 1.2rem;
+  padding: 0.1em 0;
+  font-size: 1.1rem;
   color: #555;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 /* Button */
@@ -117,18 +80,14 @@ function scrollToServices() {
   color: rgb(148, 139, 139);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .profile-card {
-    flex-direction: column;
-    text-align: center;
-    width: 90%;
+  /* Responsive */
+  @media (max-width: 900px) {
+    .profile-card {
+      flex-direction: column;
+      text-align: center;
+      width: 90%;
+    }
   }
-
-  .bio-container {
-    max-width: 90%;
-  }
-}
 
 @keyframes profile-emerge {
   from {
@@ -146,6 +105,8 @@ function scrollToServices() {
   max-height: 45vh;
   background: #ffffff; /* white box */
   width:95%;
+  gap: 1.5rem;
+  padding: 1rem;
 }
 
 .profile-photo {
@@ -177,7 +138,9 @@ function scrollToServices() {
 }
 .summary{
   font-size: large;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
 </style>
