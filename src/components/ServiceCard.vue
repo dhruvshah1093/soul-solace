@@ -50,4 +50,9 @@ defineProps({
   padding: 0.75rem;
 }
 
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
 </style>

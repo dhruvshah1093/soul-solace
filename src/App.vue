@@ -226,6 +226,13 @@ nav a.active {
   min-height: 80%;
 }
 
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 #contact {
   background: #e6f4e6;
   padding: 4rem 0;
