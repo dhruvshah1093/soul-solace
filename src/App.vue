@@ -39,15 +39,17 @@
       <section id="about">
         <ProfileCard :photo="aboutContent.photo" :name="aboutContent.name" :subtitle="aboutContent.subtitle" :degree="aboutContent.degree" :experience="aboutContent.experience" :langauges="aboutContent.langauges" :availbility="aboutContent.availbility" :bio="aboutContent.bio" />
       </section>
-      <section id="services" class="service-grid">
-        <h2>Services Offered</h2>
-        <ServiceCard
-          v-for="service in services"
-          :key="service.title"
-          :title="service.title"
-          :description="service.description"
-          :image="service.image"
-        />
+      <section id="services" >
+        <h2 class="services-title">Services Offered</h2>
+        <div class="service-grid">
+          <ServiceCard
+            v-for="service in services"
+            :key="service.title"
+            :title="service.title"
+            :description="service.description"
+            :image="service.image"
+          />
+        </div>
       </section>
       <section id="contact">
         <ContactForm />
@@ -144,14 +146,48 @@ nav a.active {
 }
 
 .logo {
-  height:50px;
-  margin-right: 1rem;
+  height: 40px;
+  margin-right: 0.75rem;
 }
 
 .title {
   color: srgb(15, 15, 17);
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-right: 1rem;
+  }
+
+  .logo {
+    height: 32px;
+    margin-right: 0.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 28px;
+    margin-right: 0.4rem;
+  }
+
+  .title {
+    font-size: 0.875rem;
+  }
+
+  nav {
+    display: none;
+  }
 }
 
 #hero{
@@ -170,18 +206,24 @@ nav a.active {
   background: #e6f4e6;
 }
 
-#services.service-grid {
+.services-title {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+.service-grid {
   display: grid;
-  /* Display exactly three service cards per row */
   grid-template-columns: repeat(3, 1fr);
-  /* Provide a small gap between service cards */
-  gap: 1rem;
+  gap: 3rem;
   justify-items: center;
-  align-items: stretch;
   justify-content: space-evenly;
   align-content: space-evenly;
-  min-height: 80vh;
-  width: 100%;
+  min-height: 80%;
 }
 
 #contact {
