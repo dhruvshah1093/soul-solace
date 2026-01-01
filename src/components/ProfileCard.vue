@@ -179,9 +179,14 @@ function scrollToServices() {
   }
   .summary {
     font-size: medium;
+    width: 90%;
   }
   .content-header{
    margin-bottom: 1rem;
+  }
+  .bio-text {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 </style>
