@@ -2,19 +2,21 @@
   <section class="hero">
     <div class="overlay">
       <p class="guiding-light">{{ message }}</p>
-      <button class="overlay-button" @click="scrollToServices">Get Started</button>
+      <iframe
+        class="overlay-button"
+        frameborder="0"
+        height="28"
+        scrolling="no"
+        src="https://soul-solace.janeapp.com/embed/book_online"
+        title="Book online"
+        width="177"
+      ></iframe>
     </div>
   </section>
 </template>
 
 <script setup>
 defineProps(['title', 'message'])
-function scrollToServices() {
-  const el = document.getElementById('contact')
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth' })
-  }
-}
 </script>
 
 <style scoped>
@@ -52,6 +54,7 @@ function scrollToServices() {
   padding: 0.6em 1.2em;
   color: #839c7a;
   background: transparent;
+  border: none;
   border-radius: 8px;
   box-shadow: 0 0 20px 4px #8ea387;
   animation: emerge 10s ease-out forwards;
