@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="cta-container">
-      <button class="outlined-btn" @click="scrollToServices">Book an Appointment</button>
+      <iframe frameborder='0' scrolling='no' src='https://soul-solace.janeapp.com/embed/book_online'></iframe>
     </div>
   </section>
 </template>
@@ -32,12 +32,6 @@
 
 <script setup>
 defineProps(['photo', 'name', 'subtitle', 'degree', 'experience', 'langauges', 'availbility', 'bio'])
-function scrollToServices() {
-  const el = document.getElementById('services')
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth' })
-  }
-}
 </script>
 
 <style scoped>
@@ -96,21 +90,6 @@ function scrollToServices() {
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-.outlined-btn {
-  border: 2px solid #839c7a;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0.6em 1.2em;
-  color: #839c7a;
-  background: transparent;
-  border-radius: 8px;
-  font-size: large;
-  align-self: flex-start;
-}
-.outlined-btn:hover {
-  background: #d2eec7;
-  color: rgb(148, 139, 139);
-}
 .summary {
   background-color: white;
   padding: 1rem;
@@ -128,9 +107,10 @@ function scrollToServices() {
 }
 .cta-container {
   display: flex;
-  width: 95%;
+  width: 84%;
   justify-content: flex-end;
   margin-top: 5rem;
+  transform: scale(1.5);
 }
 
 @keyframes profile-emerge {
@@ -154,9 +134,12 @@ function scrollToServices() {
     justify-content: center;
     
   }
+}
 
+@media (max-width: 768px) {
   .cta-container {
-    justify-content: center;
+    transform: scale(1.2);
+    width: 100%;
   }
 }
 
