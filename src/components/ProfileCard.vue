@@ -134,9 +134,12 @@ defineProps(['photo', 'name', 'subtitle', 'degree', 'experience', 'langauges', '
     justify-content: center;
     
   }
+}
 
+@media (max-width: 768px) {
   .cta-container {
-    justify-content: center;
+    transform: scale(1.2);
+    width: 100%;
   }
 }
 
