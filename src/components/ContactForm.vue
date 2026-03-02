@@ -25,6 +25,38 @@
         here to walk alongside as you explore your path to a more fulfilled
         life.
       </p>
+
+      <div class="social-links" aria-label="Social profiles">
+        <a
+          class="social-link"
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.5-3.88 3.78-3.88 1.1 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.62.77-1.62 1.56V12h2.76l-.44 2.89h-2.32v6.99A10 10 0 0 0 22 12"
+            />
+          </svg>
+          <span>Facebook</span>
+        </a>
+
+        <a
+          class="social-link"
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2m0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5m8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8"
+            />
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -95,6 +127,8 @@ onMounted(async () => {
   border: 2px solid #d4eef1;
   min-height: 290px;
   display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -107,6 +141,38 @@ onMounted(async () => {
   line-height: 1.5;
   color: #1f2b2f;
   max-width: 36ch;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #445643;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  text-decoration: none;
+  color: #1f2b2f;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.social-link svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  background: #ffffff;
+  border-color: #2f3a2f;
 }
 
 @media (max-width: 900px) {
