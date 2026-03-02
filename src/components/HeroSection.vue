@@ -5,11 +5,10 @@
       <iframe
         class="overlay-button"
         frameborder="0"
-        height="28"
         scrolling="no"
         src="https://soul-solace.janeapp.com/embed/book_online"
         title="Book online"
-        width="177"
+        style="transform: scale(1.5);" 
       ></iframe>
     </div>
   </section>
@@ -46,20 +45,11 @@ defineProps(['title', 'message'])
 
 .overlay-button {
   position: absolute;
-  left: 50%;
+  left: 47%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0.6em 1.2em;
-  color: #839c7a;
-  background: transparent;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 0 20px 4px #8ea387;
+  font-size: x-large;
   animation: emerge 10s ease-out forwards;
   transform: translateX(-50%) translateZ(-50px);
-  font-size: clamp(1rem, 2.5vw, 1.6rem);
 }
 
 @keyframes emerge {
@@ -97,7 +87,7 @@ defineProps(['title', 'message'])
     font-size: clamp(1rem, 5vw, 2rem);
   }
   .overlay-button {
-    left: 45%;
+    left: 35%;
   }
 }
 
