@@ -1,36 +1,131 @@
 <template>
-  <div class="form-container">
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <div class="contact-template">
+    <div class="info-grid">
+      <article class="info-card">
+        <h3>Location</h3>
+        <p>{{ address }}</p>
+      </article>
+      <article class="info-card">
+        <h3>Phone Number</h3>
+        <p>{{ phone }}</p>
+      </article>
+      <article class="info-card">
+        <h3>Email</h3>
+        <p>{{ contactEmail }}</p>
+      </article>
+      <article class="info-card">
+        <h3>Hours</h3>
+        <p>{{ hours }}</p>
+      </article>
+    </div>
+
+    <div class="message-panel">
+      <p>
+        Taking the first step is often the hardest but most important. We are
+        here to walk alongside as you explore your path to a more fulfilled
+        life.
+      </p>
+    </div>
   </div>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const contactEmail = ref('contact@soul-solace.ca')
+const phone = ref('416-939-4034')
+const address = ref('Coming Soon')
+const hours = ref('Mon–Fri | 9:00 AM – 6:00 PM')
+
+onMounted(async () => {
+  const response = await fetch('/content/contact.json')
+  const data = await response.json()
+  contactEmail.value = data.email || contactEmail.value
+  phone.value = data.phone
+  address.value = data.address
+  hours.value = data.hours
+})
+</script>
+
 <style scoped>
-  .form-container {
-    background: #ffffff;
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    font-size: 1.2rem;
-  }
-input, textarea {
-  padding: 1rem;
-  font-size: 1.1rem;
+.contact-template {
+  display: grid;
+  grid-template-columns: minmax(240px, 360px) minmax(320px, 1fr);
+  /* gap: 1.25rem; */
+  width: min(1000px, 92vw);
+  padding: 2rem;
+  /* background: #2f3a2f; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2); */
 }
-button {
-  font-size: 1.2rem;
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(110px, 1fr));
+  /* gap: 0.9rem; */
+}
+
+.info-card {
+  background: #f6fbf5;
+  border: 2px solid #d8ead4;
+  min-height: 130px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #2f3a2f;
+  text-transform: uppercase;
+}
+
+.info-card p {
+  margin: 0;
+  color: #445643;
+  line-height: 1.4;
+}
+
+.message-panel {
+  background: rgba(150, 195, 36, 0.2);
+  border: 2px solid #d4eef1;
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.message-panel p {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: #1f2b2f;
+  max-width: 36ch;
+}
+
+@media (max-width: 900px) {
+  .contact-template {
+    grid-template-columns: 1fr;
+  }
+
+  .message-panel {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 560px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .message-panel p {
+    font-size: 1.1rem;
+  }
 }
 </style>

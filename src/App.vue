@@ -64,14 +64,11 @@ import HeroSection from '@/components/HeroSection.vue'
 import ProfileCard from '@/components/ProfileCard.vue'
 import ServiceCard from '@/components/ServiceCard.vue'
 import ContactForm from '@/components/ContactForm.vue'
-import ContactInfo from '@/components/ContactInfo.vue'
 
 const activeTab = ref('hero')
 const homeContent = ref({ title: '', message: '' })
 const aboutContent = ref({ photo: '', name: '', subtitle: '', degree: '', experience: '', langauges: '', availbility: '', bio: '' })
 const services = ref([])
-const contact = ref({ email: '', phone: '', address: '' })
-
 function reloadPage() {
   window.location.reload()
 }
@@ -99,8 +96,6 @@ onMounted(async () => {
     services.value.push(parseFrontMatter(await res.text()))
   }
 
-  const contactRes = await fetch('/content/contact.json')
-  contact.value = await contactRes.json()
 })
 </script>
 
