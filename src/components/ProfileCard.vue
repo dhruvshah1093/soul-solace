@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="cta-container">
-      <iframe frameborder='0' height='28' scrolling='no' src='https://soul-solace.janeapp.com/embed/book_online' width='177'></iframe>
+      <iframe frameborder='0' scrolling='no' src='https://soul-solace.janeapp.com/embed/book_online'></iframe>
     </div>
   </section>
 </template>
@@ -107,9 +107,10 @@ defineProps(['photo', 'name', 'subtitle', 'degree', 'experience', 'langauges', '
 }
 .cta-container {
   display: flex;
-  width: 95%;
+  width: 84%;
   justify-content: flex-end;
   margin-top: 5rem;
+  transform: scale(1.5);
 }
 
 @keyframes profile-emerge {
