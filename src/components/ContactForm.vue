@@ -2,12 +2,12 @@
   <div class="contact-template">
     <div class="info-grid">
       <article class="info-card">
-        <h3>Our Main Office</h3>
-        <p>Online &amp; In-Person Support</p>
+        <h3>Location</h3>
+        <p>{{ address }}</p>
       </article>
       <article class="info-card">
         <h3>Phone Number</h3>
-        <p>(555) 123-4567</p>
+        <p>{{ phone }}</p>
       </article>
       <article class="info-card">
         <h3>Email</h3>
@@ -15,7 +15,7 @@
       </article>
       <article class="info-card">
         <h3>Hours</h3>
-        <p>Mon–Fri | 9:00 AM – 6:00 PM</p>
+        <p>{{ hours }}</p>
       </article>
     </div>
 
@@ -33,11 +33,17 @@
 import { ref, onMounted } from 'vue'
 
 const contactEmail = ref('contact@soul-solace.ca')
+const phone = ref('416-939-4034')
+const address = ref('Coming Soon')
+const hours = ref('Mon–Fri | 9:00 AM – 6:00 PM')
 
 onMounted(async () => {
   const response = await fetch('/content/contact.json')
   const data = await response.json()
   contactEmail.value = data.email || contactEmail.value
+  phone.value = data.phone
+  address.value = data.address
+  hours.value = data.hours
 })
 </script>
 
@@ -45,18 +51,18 @@ onMounted(async () => {
 .contact-template {
   display: grid;
   grid-template-columns: minmax(240px, 360px) minmax(320px, 1fr);
-  gap: 1.25rem;
+  /* gap: 1.25rem; */
   width: min(1000px, 92vw);
   padding: 2rem;
-  background: #2f3a2f;
-  border-radius: 10px;
-  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+  /* background: #2f3a2f; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2); */
 }
 
 .info-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(110px, 1fr));
-  gap: 0.9rem;
+  /* gap: 0.9rem; */
 }
 
 .info-card {
@@ -85,7 +91,7 @@ onMounted(async () => {
 }
 
 .message-panel {
-  background: #9ed7dd;
+  background: rgba(150, 195, 36, 0.2);
   border: 2px solid #d4eef1;
   min-height: 290px;
   display: flex;
