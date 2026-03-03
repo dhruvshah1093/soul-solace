@@ -15,7 +15,7 @@
       </article>
       <article class="info-card">
         <h3>Hours</h3>
-        <p>{{ hours }}</p>
+        <p v-html="hours"></p>
       </article>
     </div>
 
