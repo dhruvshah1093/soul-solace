@@ -14,8 +14,8 @@
         <p>{{ contactEmail }}</p>
       </article>
       <article class="info-card">
-        <h3>Hours</h3>
-        <p v-html="hours"></p>
+        <h3>Direct Billing</h3>
+        <p v-html="direct_billing"></p>
       </article>
     </div>
 
@@ -67,7 +67,7 @@ import { ref, onMounted } from 'vue'
 const contactEmail = ref('contact@soul-solace.ca')
 const phone = ref('416-939-4034')
 const address = ref('Coming Soon')
-const hours = ref('Mon–Fri | 9:00 AM – 6:00 PM')
+const direct_billing = ref('Available')
 
 onMounted(async () => {
   const response = await fetch('/content/contact.json')
@@ -75,7 +75,7 @@ onMounted(async () => {
   contactEmail.value = data.email || contactEmail.value
   phone.value = data.phone
   address.value = data.address
-  hours.value = data.hours
+  direct_billing.value = data.direct_billing
 })
 </script>
 
