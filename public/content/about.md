@@ -1,7 +1,7 @@
 ---
 name: Nidhi Gandhi
 subtitle: PhD, Registered Psychotherapist
-degree: PhD in Psychology, CRPO License #10552
+degree: PhD in Psychology, CRPO #10552
 experience: 12+ Years of experience in Psychotherapy
 langauges: Services Offered in English, Gujrati, Hindi
 availability: In person- Milton and Mississauga and Virtual across Ontario
