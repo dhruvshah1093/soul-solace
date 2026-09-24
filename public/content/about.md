@@ -2,7 +2,7 @@
 name: Nidhi Gandhi
 subtitle: PhD, Registered Psychotherapist- Accepting New Clients
 degree: PhD in Psychology, CRPO #10552
-experience: 12+ Years of experience in Individual and Couple Psychotherapy
+experience: 12+ Years in Individual and Couple Psychotherapy
 languages: Culturally informed sessions in Hindi, Gujrati, English
 availability: In person- Milton and Mississauga and Virtual across Ontario
 photo: /uploads/profile.jpeg
