@@ -1,6 +1,6 @@
 ---
 name: Nidhi Gandhi
-subtitle: PhD, Registered Psychotherapist
+subtitle: PhD, Registered Psychotherapist- Accepting New Clients
 degree: PhD in Psychology, CRPO #10552
 experience: 12+ Years of experience in Psychotherapy
 langauges: Services Offered in English, Gujrati, Hindi
